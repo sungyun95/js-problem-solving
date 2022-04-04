@@ -1,3 +1,5 @@
+// 슬라이딩 윈도우 풀이 -> ? 아님..
+
 function solution(k, arr) {
   let answer,
     sum = 0,
@@ -5,18 +7,12 @@ function solution(k, arr) {
     lt = 0,
     n = arr.length;
 
-  while (lt < n - k + 1) {
-    for (let rt = lt; rt - lt < k; rt++) {
-      sum += arr[rt];
-    }
-    if (max < sum) max = sum;
-
-    sum = 0;
+  while (lt < n - 2) {
+    sum = arr.slice(lt, lt + k).reduce((a, b) => a + b);
+    max < sum && (max = sum);
     lt++;
   }
-
   answer = max;
-
   return answer;
 }
 
