@@ -9,9 +9,11 @@ function solution(s) {
       stack.push(x);
     } else {
       if (stack[stack.length - 1] === "(") {
-        stack.pop();
+        // 레이저
+        stack.pop(); // stack.pop() 중복...
         answer += stack.length;
       } else {
+        // 막대기의 끝
         stack.pop();
         answer += 1;
       }
