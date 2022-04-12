@@ -10,7 +10,6 @@ function solution(need, plan) {
       if (x !== queue.shift()) return "NO";
     }
   }
-
   if (queue.length > 0) return "NO";
 
   return answer;
