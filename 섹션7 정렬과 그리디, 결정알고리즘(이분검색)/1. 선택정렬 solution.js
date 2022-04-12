@@ -1,7 +1,7 @@
 // 선택정렬
 
 function solution(arr) {
-  let answer = arr; // 얕은 복사 : answer를 바꿔도 arr 가  바뀜
+  let answer = arr; // 얕은 복사 : answer를 바꿔도 arr가 바뀜
 
   for (let i = 0; i < arr.length; i++) {
     let idx = i;
